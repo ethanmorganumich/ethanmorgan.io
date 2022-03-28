@@ -11,3 +11,8 @@ https://www.youtube.com/watch?v=AxfjMZbLifQ&ab_channel=CodingTech
 
 This is a nice one:
 https://mademistakes.com/work/minimal-mistakes-jekyll-theme/
+
+
+Interesting personal website
+https://github.com/hashirshoaeb/home
+

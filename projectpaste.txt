@@ -251,3 +251,18 @@
                 </div> <!-- end works-portfolio -->
 
             </section> <!-- end s-works -->
+
+
+
+
+
+
+                                Notable features implemented:
+                                <ul>
+                                    <li>Double Click Like</li>
+                                    <li>Commenting</li>
+                                    <li>Infinity scroll</li>
+                                    <li>User Authentication</li>
+                                    <li>Browser History</li>
+                                    <li>Human Readable Timestamps</li>
+                                </ul>
