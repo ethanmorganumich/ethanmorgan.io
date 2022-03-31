@@ -16,9 +16,11 @@ function App() {
             <Route exact path="/" element={
               <Home />
             } />
-            {/* <Route path="/resume">
-              <Redirect to="/resume.pdf" />
-            </Route> */}
+            <Route path="/resume" element={
+              <Resume />
+            }>
+              {/* <Redirect to="/resume.pdf" /> */}
+            </Route>
           </Routes>
         </div>
 
