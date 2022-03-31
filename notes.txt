@@ -1,8 +1,0 @@
-https://us-east-2.console.aws.amazon.com/amplify/home?region=us-east-2#/home
-https://domains.google.com/registrar/
-https://analytics.google.com/analytics/web/#/p290105540/reports/reportinghub
-
-
-bootstrap or webflow
-
-https://www.youtube.com/watch?v=kVeOpcw4GWY&ab_channel=TheNetNinja
