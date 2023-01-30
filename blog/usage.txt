@@ -1,5 +1,3 @@
-
-
 Writing a post
 1. write to _posts with format from before
 2. run ./compileJekyll.sh

@@ -682,7 +682,7 @@ textarea {
 }
 
 .lg-6 {
-    flex  : none;
+    /* flex  : none; */
     width : 50%;
 }
 
@@ -3402,12 +3402,11 @@ img.u-pull-left {
  * ## about info
  * -------------------------------------------------------------------- */
 .about-info {
-    --gutter    : 0;
     width       : 100%;
     align-items : center;
 }
 
-.about-info__pic {
+/* .about-info__pic {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
@@ -3425,7 +3424,7 @@ img.u-pull-left {
 .about-info__text .btn {
     margin-top    : var(--vspace-1);
     margin-bottom : 0;
-}
+} */
 
 /* --------------------------------------------------------------------
  * ## about expertise

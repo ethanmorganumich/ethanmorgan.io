@@ -29,7 +29,7 @@
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
     <link rel="manifest" href="site.webmanifest">
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QLCZJD91P"></script>
@@ -81,7 +81,7 @@
                         <li><a href="index.html" class="home-link">Home</a></li>
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#projects" class="smoothscroll">Projects</a></li>
-                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                         <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
                     </ul>
                 </nav>
@@ -97,7 +97,7 @@
 
             <!-- ### intro
             ================================================== -->
-            <section id="intro" class="s-intro target-section">
+            <section id="about" class="s-intro target-section">
 
                 <div class="row intro-content wide">
 
@@ -130,30 +130,19 @@
 
             <!-- ### about
             ================================================== -->
-            <section id="about" class="s-about target-section">
+            <section id="about" class="target-section">
 
-
-                <div class="row about-info wide" data-animate-block>
-
-                    <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/professionalHeadshot.jpg" 
-                             srcset="images/UmichNorthCampusGrove.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el>
-                             <!-- srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x" alt="" class="about-info__pic" data-animate-el -->
-                    </div>
+                <div class="row wide" data-animate-block>
 
                     <div class="column lg-6 md-12">
-                        <div class="about-info__text" >
-
-                            <h2 class="text-pretitle with-line" data-animate-el>
-                                About
-                            </h2>
-                            <p class="attention-getter" data-animate-el>
-                                I am senior computer science student at the University of Michigan studying computer science with a focus in cybersecurity. 
-                                I will be starting as a Software Development Engineering at AWS Cryptography this Spring (2023). 
-                            </p>
-                            <a href="resume.pdf" target="_blank" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
-
-                        </div>
+                        <h2 class="text-pretitle with-line" data-animate-el>
+                            About
+                        </h2>
+                        <p class="attention-getter" data-animate-el>
+                            I am a Software Development Engineer at Amazon Web Services (AWS) Cryptography working on short-term credential distribution.
+                            I am a graduate of the University of Michigan in computer science with a focus in cybersecurity and machine learning. 
+                        </p>
+                        <a href="resume.pdf" target="_blank" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
                     </div>
                 </div> <!-- about-info -->
 
@@ -184,6 +173,17 @@
                         </h2>
 
                         <div class="timeline" data-animate-el>
+                            <div class="timeline__block">
+                                <div class="timeline__bullet"></div>
+                                <div class="timeline__header">
+                                    <h4 class="timeline__title">Amazon Web Services (AWS)</h3>
+                                    <h5 class="timeline__meta">Software Development Engineer</h5>
+                                    <p class="timeline__timeframe">March 2023 - Present</p>
+                                </div>
+                                <div class="timeline__desc">
+                                    <p>Working in Short-term Credential Distribution Systems at AWS Cryptography</p>
+                                </div>
+                            </div>
 
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
@@ -193,7 +193,8 @@
                                     <p class="timeline__timeframe">May 2022 - August 2022</p>
                                 </div>
                                 <div class="timeline__desc">
-                                    <p>Working in Credential Distribution System at AWS Cryptography</p>
+                                    <p> Created a short-term credential migration tool for IAM Users to IAM Roles, using AWS Step Functions.
+                                        Worked in Short-term Credential Distribution Systems at AWS Cryptography.</p>
                                 </div>
                             </div>
     
@@ -244,7 +245,7 @@
                                             <li>Introduction to Cybersecurity (EECS 388)</li>
                                             <li>Computer Networks (EECS 489)</li>
                                             <li>User Experience (EECS 493)</li>
-                                            <li>Infomation Retrival (EECS 486)</li>
+                                            <li>Information Retrival (EECS 486)</li>
                                             <li>Mobile App Development for Entrepeneurs (EECS 441)</li>
                                             <li>Introduction to Machine Learning (EECS 445)</li>
                                             <li>Web Systems (EECS 485)</li>
@@ -513,7 +514,6 @@
                         <h3 class="text-pretitle">Reach me at</h3>
                         <p class="contact-links">
                             <a href="mailto:etcmo@umich.edu" class="mailtoui">etcmo@umich.edu</a> <br>
-                            734 233 4169
                         </p>
                     </div>
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
