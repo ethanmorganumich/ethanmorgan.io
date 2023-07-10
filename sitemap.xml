@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.ethanmorgan.io/index.html</loc>
-  </url>
-  <url>
-    <loc>https://www.ethanmorgan.io/blog/</loc>
-  </url>
-  <url>
-    <loc>https://www.ethanmorgan.io/blog/posts/I-felt-the-World-Change-The-Release-of-ChatGPT/</loc>
-  </url>
-  <url>
-    <loc>https://www.ethanmorgan.io/blog/posts/First-Blog/</loc>
-  </url>  
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>ethanmorgan.io/blog/posts/First-Blog/</loc>
+<lastmod>2023-06-30T23:44:40+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/posts/I-felt-the-World-Change-The-Release-of-ChatGPT/</loc>
+<lastmod>2022-12-04T13:42:00+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/posts/2023-Amazon-Layoffs/</loc>
+<lastmod>2023-05-02T15:20:00+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/categories/</loc>
+<lastmod>2023-06-30T23:45:29+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/tags/</loc>
+<lastmod>2023-06-30T23:45:29+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/archives/</loc>
+<lastmod>2023-06-30T23:45:29+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/about/</loc>
+<lastmod>2023-06-30T23:45:29+00:00</lastmod>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/tags/gpt/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/tags/layoffs/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/tags/amazon/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/tags/aws/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/categories/the-ai-times/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/blog/categories/career/</loc>
+</url>
+<url>
+<loc>ethanmorgan.io/index.html</loc>
+</url>
 </urlset>

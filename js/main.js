@@ -46,10 +46,42 @@
         delay: anime.stagger(400)
     })
     .add({
-        targets: '.circles span',
+        targets: '#circle1',
         keyframes: [
-            {opacity: [0, .3]},
-            {opacity: [.3, .1], delay: anime.stagger(100, {direction: 'reverse'})}
+            {opacity: [0, 1]},
+            {opacity: [1, .1], delay: anime.stagger(100, {direction: 'reverse'})}
+        ],
+        // delay: anime.stagger(100, {direction: 'reverse'})
+    })
+    .add({
+        targets: '#circle2',
+        keyframes: [
+            {opacity: [0, 1]},
+            {opacity: [1, .3], delay: anime.stagger(100, {direction: 'reverse'})}
+        ],
+        // delay: anime.stagger(100, {direction: 'reverse'})
+    })
+    .add({
+        targets: '#circle3',
+        keyframes: [
+            {opacity: [0, 1]},
+            {opacity: [1, .5], delay: anime.stagger(100, {direction: 'reverse'})}
+        ],
+        // delay: anime.stagger(100, {direction: 'reverse'})
+    })
+    .add({
+        targets: '#circle4',
+        keyframes: [
+            {opacity: [0, 1]},
+            {opacity: [1, .7], delay: anime.stagger(100, {direction: 'reverse'})}
+        ],
+        // delay: anime.stagger(100, {direction: 'reverse'})
+    })
+    .add({
+        targets: '#circle5',
+        keyframes: [
+            {opacity: [0, 1]},
+            {opacity: [1, .9], delay: anime.stagger(100, {direction: 'reverse'})}
         ],
         delay: anime.stagger(100, {direction: 'reverse'})
     })
