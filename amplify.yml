@@ -9,4 +9,3 @@ frontend:
     build:
       commands:
         - npm run build
-
