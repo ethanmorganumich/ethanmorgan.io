@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Ethan&#039;s Blog 👋</title>
+      <link>https://ethanmorgan.io/blogtemp/</link>
+      <description>Last 10 notes on Ethan&#039;s Blog 👋</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>home!</title>
+    <link>https://ethanmorgan.io/blogtemp/</link>
+    <guid>https://ethanmorgan.io/blogtemp/</guid>
+    <description>This is home!.</description>
+    <pubDate>Mon, 05 Feb 2024 04:06:04 GMT</pubDate>
+  </item><item>
+    <title>Hello</title>
+    <link>https://ethanmorgan.io/blogtemp/Learnings/What-is-up</link>
+    <guid>https://ethanmorgan.io/blogtemp/Learnings/What-is-up</guid>
+    <description>qdajbksdfansfkapsfa.</description>
+    <pubDate>Mon, 05 Feb 2024 03:54:51 GMT</pubDate>
+  </item><item>
+    <title>My Journey: High School to Amazon</title>
+    <link>https://ethanmorgan.io/blogtemp/My-Journey;-High-School-to-Amazon</link>
+    <guid>https://ethanmorgan.io/blogtemp/My-Journey;-High-School-to-Amazon</guid>
+    <description></description>
+    <pubDate>Mon, 02 Oct 2023 05:28:00 GMT</pubDate>
+  </item><item>
+    <title>LoRa: Low Rank Adaptation of Large Language Models Paper Review</title>
+    <link>https://ethanmorgan.io/blogtemp/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</link>
+    <guid>https://ethanmorgan.io/blogtemp/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</guid>
+    <description>LoRa: Low Rank Adaptation of Large Language Models Paper Review Here is the paper I will be writing about today. LoRa: Low-Rank Adaptation of Large Language Models Paper 1.</description>
+    <pubDate>Wed, 12 Jul 2023 19:45:00 GMT</pubDate>
+  </item><item>
+    <title> The 2023 AWS Layoffs and Personal Insights</title>
+    <link>https://ethanmorgan.io/blogtemp/Amazon-Layoffs</link>
+    <guid>https://ethanmorgan.io/blogtemp/Amazon-Layoffs</guid>
+    <description>In an unprecedented turn of events, Amazon Web Services (AWS) recently faced a round of layoffs. This is a first in the history of AWS, marking a break from the past when even the tumultuous times of the 2008 financial crisis saw no layoffs at Amazon.</description>
+    <pubDate>Fri, 02 Jun 2023 22:20:00 GMT</pubDate>
+  </item><item>
+    <title>I felt the World Change: The Release of ChatGPT</title>
+    <link>https://ethanmorgan.io/blogtemp/I-felt-the-World-Change;-The-Release-of-ChatGPT</link>
+    <guid>https://ethanmorgan.io/blogtemp/I-felt-the-World-Change;-The-Release-of-ChatGPT</guid>
+    <description>On December 1st, 2022, I watch the world change. As I sat in front of my computer, I couldn’t believe my eyes. As I continued to use chatGPT, I was struck by how intuitive and user-friendly it was.</description>
+    <pubDate>Sun, 04 Dec 2022 21:42:00 GMT</pubDate>
+  </item><item>
+    <title>My Hello World</title>
+    <link>https://ethanmorgan.io/blogtemp/First-Blog</link>
+    <guid>https://ethanmorgan.io/blogtemp/First-Blog</guid>
+    <description>Does it ever start without a Hello World?.</description>
+    <pubDate>Mon, 28 Nov 2022 06:05:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

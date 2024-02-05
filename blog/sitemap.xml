@@ -1,133 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>ethanmorgan.io/blog/posts/First-Blog/</loc>
-<lastmod>2023-06-30T23:44:40+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/posts/I-felt-the-World-Change-The-Release-of-ChatGPT/</loc>
-<lastmod>2022-12-04T13:42:00+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/posts/2023-Amazon-Layoffs/</loc>
-<lastmod>2023-06-02T15:20:00+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/posts/LoRa-Low-Rank-Adapatation-of-Large-Language-Models/</loc>
-<lastmod>2023-07-12T12:45:00+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/categories/</loc>
-<lastmod>2023-07-14T18:43:50+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/</loc>
-<lastmod>2023-07-14T18:43:50+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/archives/</loc>
-<lastmod>2023-07-14T18:43:50+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/about/</loc>
-<lastmod>2023-07-14T18:43:50+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/gpt/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/layoffs/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/amazon/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/aws/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/llms/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/tags/machine-learning/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/categories/the-ai-times/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/categories/career/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/categories/machine-learning/</loc>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/about/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/archives/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/assets/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/categories/career/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/categories/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/categories/the-ai-times/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/norobots/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/posts/2023-Amazon-Layoffs/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/posts/First-Blog/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/posts/I-felt-the-World-Change-The-Release-of-ChatGPT/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/posts/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/tags/amazon/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/tags/aws/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/tags/gpt/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/tags/</loc>
-<lastmod>2023-06-30T23:45:30+00:00</lastmod>
-</url>
-<url>
-<loc>ethanmorgan.io/blog/blog/tags/layoffs/</loc>
-<lastmod>2023-06-30T23:45:29+00:00</lastmod>
-</url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://ethanmorgan.io/blogtemp/Amazon-Layoffs</loc>
+    <lastmod>2023-06-02T22:20:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/First-Blog</loc>
+    <lastmod>2022-11-28T06:05:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/I-felt-the-World-Change;-The-Release-of-ChatGPT</loc>
+    <lastmod>2022-12-04T21:42:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/Learnings/What-is-up</loc>
+    <lastmod>2024-02-05T03:54:51.972Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</loc>
+    <lastmod>2023-07-12T19:45:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/My-Journey;-High-School-to-Amazon</loc>
+    <lastmod>2023-10-02T05:28:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blogtemp/</loc>
+    <lastmod>2024-02-05T04:06:04.817Z</lastmod>
+  </url></urlset>

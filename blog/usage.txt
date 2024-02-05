@@ -1,5 +1,0 @@
-Writing a post
-1. write to _posts with format from before
-2. run ./compileJekyll.sh
-3. go into ethanmorgan.io and git add commit push all of the new changes
-3.a. if you want to view the changes run http-server and view
