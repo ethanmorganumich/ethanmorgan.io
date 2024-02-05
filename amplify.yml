@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - node -v
+        - npx quartz build -o blog
   artifacts:
     baseDirectory: /
     files:
