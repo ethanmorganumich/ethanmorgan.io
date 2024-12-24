@@ -8,6 +8,9 @@
 # Format the date as YYYY-MM-DD. You can adjust the date format as needed.
 TODAYS_DATE=$(date)
 
+# cd into the correct folder
+cd /Users/emorgan/Documents/PersonalWebsite/ethanmorgan.io
+
 # move into the quartz folder
 cd ../quartz
 # build the blog

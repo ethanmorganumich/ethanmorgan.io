@@ -1,22 +1,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://ethanmorgan.io/blog/Amazon-Layoffs</loc>
-    <lastmod>2023-06-02T19:20:00.000Z</lastmod>
-  </url><url>
     <loc>https://ethanmorgan.io/blog/First-Blog</loc>
     <lastmod>2022-11-28T03:05:00.000Z</lastmod>
   </url><url>
-    <loc>https://ethanmorgan.io/blog/I-felt-the-World-Change;-The-Release-of-ChatGPT</loc>
-    <lastmod>2022-12-04T18:42:00.000Z</lastmod>
+    <loc>https://ethanmorgan.io/blog/Learnings/Amazon-Layoffs</loc>
+    <lastmod>2023-06-02T19:20:00.000Z</lastmod>
   </url><url>
-    <loc>https://ethanmorgan.io/blog/Learnings/temp</loc>
-    <lastmod>2024-12-23T23:45:11.695Z</lastmod>
-  </url><url>
-    <loc>https://ethanmorgan.io/blog/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</loc>
-    <lastmod>2023-07-12T16:45:00.000Z</lastmod>
-  </url><url>
-    <loc>https://ethanmorgan.io/blog/My-Journey;-High-School-to-Amazon</loc>
+    <loc>https://ethanmorgan.io/blog/Learnings/My-Journey;-High-School-to-Amazon</loc>
     <lastmod>2023-10-02T02:28:00.000Z</lastmod>
   </url><url>
     <loc>https://ethanmorgan.io/blog/</loc>
     <lastmod>2024-02-05T04:06:04.817Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blog/ml/I-felt-the-World-Change;-The-Release-of-ChatGPT</loc>
+    <lastmod>2022-12-04T18:42:00.000Z</lastmod>
+  </url><url>
+    <loc>https://ethanmorgan.io/blog/ml/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</loc>
+    <lastmod>2023-07-12T16:45:00.000Z</lastmod>
   </url></urlset>
