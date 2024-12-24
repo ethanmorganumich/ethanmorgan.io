@@ -3,6 +3,11 @@
 # Usage: When you want to update the blogs
 # $ ./updateBlogScript.sh
 
+# How to update blog
+# Write in Obsidian Workspace under ethanmorgan.io 
+# then run ./updateBlogScript.sh
+
+
 # the "content" directory is a sym link to my Obsidian Workspace where I have a folder dedicated to my online posts``
 
 # Format the date as YYYY-MM-DD. You can adjust the date format as needed.
@@ -25,3 +30,4 @@ mv ../quartz/blog .
 
 git add blog
 git commit -m "Blog update $TODAYS_DATE"
+git push
