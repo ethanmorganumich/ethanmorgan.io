@@ -7,9 +7,9 @@
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>How My Personal Website Works</title>
-    <link>https://ethanmorgan.io/blog/How-My-Personal-Website-Works</link>
-    <guid>https://ethanmorgan.io/blog/How-My-Personal-Website-Works</guid>
-    <description>What is my personal website The website exists here at ethanmorgan.io. Here is all of the code stored on a github repo here There are 2 main views homepage ethanmorgan.io blog ethanmorgan.io/blog Each are made from different templates using difference resources.</description>
+    <link>https://ethanmorgan.io/blog/Projects/How-My-Personal-Website-Works</link>
+    <guid>https://ethanmorgan.io/blog/Projects/How-My-Personal-Website-Works</guid>
+    <description>What is my personal website The website exists here at ethanmorgan.io. Here is all of the code stored on a github repo here There are 2 main views: homepage ethanmorgan.io Goal to be friendly for both technical and non-technical audiences I have told senior engineers about my website before, so I want it to look good for them and → I have showed it to my grandma, and I want it to look cool for her rather than it being a bunch of text on a blank page.</description>
     <pubDate>Fri, 27 Dec 2024 05:28:27 GMT</pubDate>
   </item><item>
     <title>Welcome To My Blog!</title>
@@ -19,32 +19,32 @@
     <pubDate>Mon, 05 Feb 2024 04:06:04 GMT</pubDate>
   </item><item>
     <title>Mamba - Linear-Time Sequence Modeling with Selective State Spaces Notes</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/Mamba---Linear-Time-Sequence-Modeling-with-Selective-State-Spaces-Notes</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/Mamba---Linear-Time-Sequence-Modeling-with-Selective-State-Spaces-Notes</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/Mamba---Linear-Time-Sequence-Modeling-with-Selective-State-Spaces-Notes</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/Mamba---Linear-Time-Sequence-Modeling-with-Selective-State-Spaces-Notes</guid>
     <description></description>
     <pubDate>Mon, 15 Jan 2024 23:19:35 GMT</pubDate>
   </item><item>
     <title>State Space Model (SSM) and Structured State Space For Sequence Modeling (S4)</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/State-Space-Model-(SSM)-and-Structured-State-Space-For-Sequence-Modeling-(S4)</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/State-Space-Model-(SSM)-and-Structured-State-Space-For-Sequence-Modeling-(S4)</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/State-Space-Model-(SSM)-and-Structured-State-Space-For-Sequence-Modeling-(S4)</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/State-Space-Model-(SSM)-and-Structured-State-Space-For-Sequence-Modeling-(S4)</guid>
     <description>Core Ideas: State Space Models (SSM) in Neural Networks: SSMs are used to model the relationship between input, output, and the internal state of a system ...</description>
     <pubDate>Mon, 15 Jan 2024 15:54:15 GMT</pubDate>
   </item><item>
     <title>Gaussian (Normal) Distribution</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/Gaussian-(Normal)-Distribution</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/Gaussian-(Normal)-Distribution</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/Gaussian-(Normal)-Distribution</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/Gaussian-(Normal)-Distribution</guid>
     <description>Mean Vector \mu the mean vector represents the central point or the expected value of the distribution, you can have multiple dimensions for a mean vector which would be like \mu=[\mu_1,\mu_2] ...</description>
     <pubDate>Sat, 11 Nov 2023 06:58:07 GMT</pubDate>
   </item><item>
     <title>Open AI Spinning Up Notes</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/Open-AI-Spinning-Up-Notes</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/Open-AI-Spinning-Up-Notes</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/Open-AI-Spinning-Up-Notes</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/Open-AI-Spinning-Up-Notes</guid>
     <description>link Algorithms On-Policy Algorithms most basic, entry level, old Vanilla Policy Gradient cannot reuse old data → weaker on sample efficiency algos optimize for policy performance ...</description>
     <pubDate>Sat, 11 Nov 2023 04:23:42 GMT</pubDate>
   </item><item>
     <title>Learning ML Resources</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/Learning-ML-Resources</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/Learning-ML-Resources</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/Learning-ML-Resources</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/Learning-ML-Resources</guid>
     <description>OpenAI Spinning Up in Deep RL Jacob Hilton Deep Learning Curriculum this one is quite open ended and has lots of experiments to do it yourself. it does point to some good resources for the prerequisites needed to understand the material.</description>
     <pubDate>Fri, 10 Nov 2023 08:44:13 GMT</pubDate>
   </item><item>
@@ -55,8 +55,8 @@
     <pubDate>Mon, 02 Oct 2023 02:28:00 GMT</pubDate>
   </item><item>
     <title>LoRa: Low Rank Adaptation of Large Language Models Paper Review</title>
-    <link>https://ethanmorgan.io/blog/ml/Learning-ML/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</link>
-    <guid>https://ethanmorgan.io/blog/ml/Learning-ML/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</guid>
+    <link>https://ethanmorgan.io/blog/ML/Learning-ML/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</link>
+    <guid>https://ethanmorgan.io/blog/ML/Learning-ML/LoRa-Low-Rank-Adaptation-of-Large-Language-Models</guid>
     <description>LoRa: Low Rank Adaptation of Large Language Models Paper Review Here is the paper I will be writing about today. LoRa: Low-Rank Adaptation of Large Language Models Paper 1.</description>
     <pubDate>Wed, 12 Jul 2023 16:45:00 GMT</pubDate>
   </item><item>
