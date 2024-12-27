@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>Ethan&#039;s blog</title>
+      <title>Ethan&#039;s Blog 👋</title>
       <link>https://ethanmorgan.io/blog</link>
-      <description>Last 10 notes on Ethan&#039;s blog</description>
+      <description>Last 10 notes on Ethan&#039;s Blog 👋</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>How My Personal Website Works</title>
+    <link>https://ethanmorgan.io/blog/How-My-Personal-Website-Works</link>
+    <guid>https://ethanmorgan.io/blog/How-My-Personal-Website-Works</guid>
+    <description>What is my personal website The website exists here at ethanmorgan.io. Here is all of the code stored on a github repo here There are 2 main views homepage ethanmorgan.io blog ethanmorgan.io/blog Each are made from different templates using difference resources.</description>
+    <pubDate>Fri, 27 Dec 2024 05:28:27 GMT</pubDate>
+  </item><item>
     <title>Welcome To My Blog!</title>
     <link>https://ethanmorgan.io/blog/</link>
     <guid>https://ethanmorgan.io/blog/</guid>
@@ -59,12 +65,6 @@
     <guid>https://ethanmorgan.io/blog/Learnings/Amazon-Layoffs</guid>
     <description>In an unprecedented turn of events, Amazon Web Services (AWS) recently faced a round of layoffs. This is a first in the history of AWS, marking a break from the past when even the tumultuous times of the 2008 financial crisis saw no layoffs at Amazon.</description>
     <pubDate>Fri, 02 Jun 2023 19:20:00 GMT</pubDate>
-  </item><item>
-    <title>I felt the World Change: The Release of ChatGPT</title>
-    <link>https://ethanmorgan.io/blog/ml/I-felt-the-World-Change;-The-Release-of-ChatGPT</link>
-    <guid>https://ethanmorgan.io/blog/ml/I-felt-the-World-Change;-The-Release-of-ChatGPT</guid>
-    <description>On December 1st, 2022, I watch the world change. As I sat in front of my computer, I couldn’t believe my eyes. As I continued to use chatGPT, I was struck by how intuitive and user-friendly it was.</description>
-    <pubDate>Sun, 04 Dec 2022 18:42:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
