@@ -1,134 +1,72 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Ethan Morgan builds human-centered AI systems, agents, and the infrastructure that makes them useful."
-    >
-    <meta name="theme-color" content="#0b0e10">
-    <title>Ethan Morgan - AI Systems</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/site.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ethan Morgan — software engineer working on AI autonomy. Projects, experiments, and technical notes." />
+    <title>Ethan Morgan</title>
+    <link rel="canonical" href="https://www.ethanmorgan.io/" />
+    <link rel="icon" href="/v2/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-    <canvas id="signal-field" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to the document</a>
 
-    <header class="site-header shell">
-      <a class="wordmark" href="/" aria-label="Ethan Morgan home">em<span>.</span></a>
-      <nav aria-label="Primary navigation">
-        <a href="#work" data-signal-key="systems">Work</a>
-        <a href="/writing/" data-signal-key="writing">Writing</a>
-        <a href="/v2/" data-signal-key="archive">Archive</a>
-        <a href="resume.pdf" target="_blank" rel="noreferrer">CV <span aria-hidden="true">↗</span></a>
+    <aside class="index" aria-label="Document index">
+      <nav>
+        <a href="#about"><span>01 /</span> About</a>
+        <a href="#recent"><span>02 /</span> Recent</a>
+        <a href="#writing"><span>03 /</span> Blog</a>
+        <a href="#elsewhere"><span>04 /</span> Elsewhere</a>
       </nav>
-    </header>
+    </aside>
 
-    <main id="content" class="shell">
-      <section class="hero" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <p class="eyebrow">ETHAN MORGAN <span aria-hidden="true">/</span> AI SYSTEMS</p>
-          <h1 id="intro-title">Tools that make <em>intelligence</em> useful.</h1>
-          <p class="lede">
-            I build human-centered AI systems: agents that can reason, act, and earn trust. My work sits at the
-            intersection of computer use, machine learning, and durable software.
-          </p>
-          <p class="now">
-            <span class="status-dot" aria-hidden="true"></span>
-            Exploring agents, reinforcement learning, and the path from research to reliable products.
-          </p>
-          <div class="hero-links" aria-label="Ethan's profiles">
-            <a href="https://github.com/ethanmorganumich" target="_blank" rel="noreferrer" data-signal-key="systems">GitHub</a>
-            <a href="https://www.linkedin.com/in/EthanMorganUMich" target="_blank" rel="noreferrer" data-signal-key="people">LinkedIn</a>
-            <a href="mailto:e@ethanmorgan.io" data-signal-key="people">Email</a>
-          </div>
+    <main class="document" id="main">
+      <header class="opening" id="about">
+        <h1>Ethan Morgan</h1>
+        <div class="opening-copy">
+          <p>Hi, I’m Ethan. I’m a software engineer working on AI autonomy at Amazon AGI. Before that, I worked on credential distribution at AWS Cryptography.</p>
+          <p>I studied computer science at the University of Michigan, with a focus on cybersecurity and machine learning.</p>
+          <p>I like making things that help people. I’m interested in <span class="phrase-inline"><span class="phrase-before">useful software</span><span class="caret" aria-hidden="true"></span><span class="phrase-after"></span></span>. Sometimes that means AI agents; sometimes it’s a <a class="tracking-link" href="https://orbit.ethanmorgan.io" target="_blank" rel="noreferrer">little game about orbits</a>.</p>
         </div>
+        <p class="inline-links"><a class="tracking-link" href="mailto:e@ethanmorgan.io">Email</a><a class="tracking-link" href="https://github.com/ethanmorganumich" target="_blank" rel="noreferrer">GitHub</a><a class="tracking-link" href="/resume.pdf">Résumé</a></p>
+      </header>
 
-        <p class="field-label" aria-hidden="true">
-          <span>001</span>
-          <span>FOLLOW THE SIGNAL</span>
-        </p>
-      </section>
-
-      <section id="work" class="section" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="eyebrow">SELECTED WORK</p>
-          <h2 id="work-title">A few things I care about building.</h2>
-        </div>
-
-        <ol class="work-list">
-          <li class="work-item" data-signal-key="agents">
-            <span class="item-number" aria-hidden="true">01</span>
-            <div>
-              <a
-                class="item-title"
-                href="https://docs.aws.amazon.com/nova-act/latest/userguide/what-is-nova-act.html"
-                target="_blank"
-                rel="noreferrer"
-                data-signal-key="agents"
-              >
-                Amazon Nova Act <span aria-hidden="true">↗</span>
-              </a>
-              <p>A computer-use-agent service. I helped take it from research into a product people can build with.</p>
-            </div>
-            <span class="item-type">AGENTS</span>
+      <section class="section" id="recent" aria-labelledby="recent-label">
+        <h2 class="section-label" id="recent-label">A few things I’ve made and written</h2>
+        <ol class="entries">
+          <li>
+            <a class="tracking-link entry-title" href="https://orbit.ethanmorgan.io" target="_blank" rel="noreferrer">Orbit Guess</a>
+            <p>A game about orbital intuition.</p>
+            <span class="entry-meta">Game</span>
           </li>
-
-          <li class="work-item" data-signal-key="research">
-            <span class="item-number" aria-hidden="true">02</span>
-            <div>
-              <a class="item-title" href="/writing/" data-signal-key="research">Computer-use research <span aria-hidden="true">→</span></a>
-              <p>Experiments in visual grounding, coding reinforcement learning, and making agent behavior measurable.</p>
-            </div>
-            <span class="item-type">RESEARCH</span>
-          </li>
-
-          <li class="work-item" data-signal-key="orbit">
-            <span class="item-number" aria-hidden="true">03</span>
-            <div>
-              <a class="item-title" href="https://orbit.ethanmorgan.io" target="_blank" rel="noreferrer" data-signal-key="orbit">
-                Orbit Guess <span aria-hidden="true">↗</span>
-              </a>
-              <p>A small game about orbital intuition, made for the joy of learning through play.</p>
-            </div>
-            <span class="item-type">EXPERIMENT</span>
+          <li>
+            <a class="tracking-link entry-title" href="/gpu-calculator/">GPU Payback Lab</a>
+            <p>A calculator for exploring GPU costs and payback assumptions.</p>
+            <span class="entry-meta">Tool</span>
           </li>
         </ol>
       </section>
 
-      <section class="section writing-preview" aria-labelledby="writing-title">
-        <div class="section-heading writing-heading">
-          <p class="eyebrow">WRITING</p>
-          <h2 id="writing-title">Short technical notes, without the noise.</h2>
-          <p>
-            Paper notes, practical experiments, and observations from building systems. The writing space is separate
-            from this page so it can stay calm and readable.
-          </p>
-          <a class="text-link" href="/writing/" data-signal-key="writing">Read the notes <span aria-hidden="true">→</span></a>
-        </div>
-
-        <div class="writing-signal" aria-hidden="true">
-          <span>LOG / 01</span>
-          <span>MODELS</span>
-          <span>SYSTEMS</span>
-          <span>FIELD NOTES</span>
+      <section class="section" id="writing" aria-labelledby="writing-label">
+        <h2 class="section-label" id="writing-label">Blog</h2>
+        <div class="prose">
+          <p><a class="tracking-link" href="/blog/">Notes from making things</a>: software, experiments, and things I’m learning along the way.</p>
         </div>
       </section>
+
+      <footer class="section footer" id="elsewhere" aria-labelledby="elsewhere-label">
+        <h2 class="section-label" id="elsewhere-label">Elsewhere</h2>
+        <div class="prose">
+          <p>You can find me on <a class="tracking-link" href="https://github.com/ethanmorganumich">GitHub</a> and <a class="tracking-link" href="https://www.linkedin.com/in/EthanMorganUMich">LinkedIn</a>, or <a class="tracking-link" href="mailto:e@ethanmorgan.io">send me an email</a>.</p>
+          <p><a class="tracking-link" href="/v2/">Previous website</a> · <a class="tracking-link" href="/blog/archive.html">Older notes</a></p>
+        </div>
+      </footer>
     </main>
 
-    <footer class="site-footer shell">
-      <p>© <span id="year">2026</span> Ethan Morgan</p>
-      <a href="/v2/" data-signal-key="archive">View the previous site <span aria-hidden="true">→</span></a>
-    </footer>
-
-    <script src="assets/site.js"></script>
+    <script src="/assets/site.js"></script>
   </body>
 </html>

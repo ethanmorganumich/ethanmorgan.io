@@ -1,114 +1,229 @@
 (() => {
-  const canvas = document.querySelector("#signal-field")
-  const year = document.querySelector("#year")
+  const indexLinks = [...document.querySelectorAll('.index nav a')];
+  const sections = indexLinks.map((link) => document.querySelector(link.hash));
 
-  if (year) year.textContent = String(new Date().getFullYear())
-  if (!canvas) return
+  function updateIndex() {
+    const readingLine = window.innerHeight * 0.3;
+    let activeIndex = 0;
 
-  const context = canvas.getContext("2d")
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  const links = document.querySelectorAll("[data-signal-key]")
-  const nodes = [
-    { key: "systems", x: 0.78, y: 0.18, phase: 0.1 },
-    { key: "agents", x: 0.88, y: 0.34, phase: 1.4 },
-    { key: "research", x: 0.68, y: 0.42, phase: 2.8 },
-    { key: "orbit", x: 0.82, y: 0.56, phase: 3.7 },
-    { key: "writing", x: 0.7, y: 0.74, phase: 4.9 },
-    { key: "people", x: 0.52, y: 0.22, phase: 2.1 },
-    { key: "archive", x: 0.91, y: 0.77, phase: 5.6 },
-  ]
-  const edges = [
-    ["systems", "agents"],
-    ["systems", "research"],
-    ["systems", "people"],
-    ["agents", "orbit"],
-    ["research", "writing"],
-    ["writing", "archive"],
-    ["orbit", "archive"],
-  ]
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= readingLine) activeIndex = index;
+    });
 
-  let activeKey = null
-  let frame = 0
-  let width = 0
-  let height = 0
-  let pixelRatio = 1
-  const pointer = { x: 0.5, y: 0.5 }
-
-  function resize() {
-    pixelRatio = Math.min(window.devicePixelRatio || 1, 2)
-    width = window.innerWidth
-    height = window.innerHeight
-    canvas.width = width * pixelRatio
-    canvas.height = height * pixelRatio
-    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
-    draw(0)
-  }
-
-  function position(node, time) {
-    const movement = reducedMotion ? 0 : Math.sin(time * 0.0005 + node.phase) * 11
-    const pointerPull = activeKey === node.key ? 18 : 0
-    return {
-      x: node.x * width + movement + (pointer.x - 0.5) * pointerPull,
-      y: node.y * height + Math.cos(time * 0.00043 + node.phase) * 9 + (pointer.y - 0.5) * pointerPull,
-    }
-  }
-
-  function draw(time) {
-    context.clearRect(0, 0, width, height)
-    const locations = new Map(nodes.map((node) => [node.key, position(node, time)]))
-
-    for (const [from, to] of edges) {
-      const first = locations.get(from)
-      const second = locations.get(to)
-      const connected = activeKey === from || activeKey === to
-      context.beginPath()
-      context.moveTo(first.x, first.y)
-      context.lineTo(second.x, second.y)
-      context.strokeStyle = connected ? "rgba(184, 247, 213, 0.32)" : "rgba(184, 247, 213, 0.075)"
-      context.lineWidth = connected ? 1.15 : 0.7
-      context.stroke()
+    const scrollHeight = document.documentElement.scrollHeight;
+    if (scrollHeight > window.innerHeight && window.scrollY + window.innerHeight >= scrollHeight - 2) {
+      activeIndex = sections.length - 1;
     }
 
-    for (const node of nodes) {
-      const point = locations.get(node.key)
-      const selected = activeKey === node.key
-      context.beginPath()
-      context.arc(point.x, point.y, selected ? 4.2 : 2.2, 0, Math.PI * 2)
-      context.fillStyle = selected ? "#e1fff0" : "rgba(184, 247, 213, 0.48)"
-      context.fill()
+    indexLinks.forEach((link, index) => {
+      if (index === activeIndex) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
 
-      if (selected) {
-        context.beginPath()
-        context.arc(point.x, point.y, 13, 0, Math.PI * 2)
-        context.strokeStyle = "rgba(184, 247, 213, 0.25)"
-        context.stroke()
+  window.addEventListener('scroll', updateIndex, { passive: true });
+  window.addEventListener('resize', updateIndex);
+  window.addEventListener('load', updateIndex);
+  updateIndex();
+
+  document.querySelectorAll('.tracking-link').forEach((link) => {
+    link.addEventListener('pointermove', (event) => {
+      const bounds = link.getBoundingClientRect();
+      const x = event.clientX - bounds.left;
+      const y = event.clientY - bounds.top;
+      const radius = Math.hypot(Math.max(x, bounds.width - x), Math.max(y, bounds.height - y));
+      link.style.setProperty('--x', `${x}px`);
+      link.style.setProperty('--y', `${y}px`);
+      link.style.setProperty('--radius', `${radius}px`);
+    });
+  });
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const before = document.querySelector('.phrase-before');
+  const after = document.querySelector('.phrase-after');
+  if (!before || !after) return;
+
+  const phrases = [
+    'useful software',
+    'humane systems',
+    'tools that last',
+    'clearer interfaces',
+  ];
+  const pause = (milliseconds) => new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+
+  let phraseIndex = 0;
+  let value = phrases[phraseIndex];
+  let caret = value.length;
+  let isReversing = true;
+
+  function render() {
+    before.textContent = value.slice(0, caret);
+    after.textContent = value.slice(caret);
+  }
+
+  function forwardPath(source, target) {
+    const rows = source.length + 1;
+    const columns = target.length + 1;
+    const distance = Array.from({ length: rows }, () => Array(columns).fill(0));
+
+    for (let i = source.length; i >= 0; i -= 1) distance[i][target.length] = source.length - i;
+    for (let j = target.length; j >= 0; j -= 1) distance[source.length][j] = target.length - j;
+
+    for (let i = source.length - 1; i >= 0; i -= 1) {
+      for (let j = target.length - 1; j >= 0; j -= 1) {
+        if (source[i] === target[j]) {
+          distance[i][j] = distance[i + 1][j + 1];
+        } else {
+          distance[i][j] = 1 + Math.min(
+            distance[i + 1][j + 1],
+            distance[i + 1][j],
+            distance[i][j + 1],
+          );
+        }
       }
     }
 
-    if (!reducedMotion) frame = window.requestAnimationFrame(draw)
+    const operations = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < source.length || j < target.length) {
+      if (i < source.length && j < target.length && source[i] === target[j]) {
+        operations.push({ type: 'move' });
+        i += 1;
+        j += 1;
+      } else if (i < source.length && j < target.length && distance[i][j] === 1 + distance[i + 1][j + 1]) {
+        operations.push({ type: 'replace', character: target[j] });
+        i += 1;
+        j += 1;
+      } else if (i < source.length && distance[i][j] === 1 + distance[i + 1][j]) {
+        operations.push({ type: 'delete' });
+        i += 1;
+      } else {
+        operations.push({ type: 'insert', character: target[j] });
+        j += 1;
+      }
+    }
+
+    return operations;
   }
 
-  function setActive(key) {
-    activeKey = key
-    if (reducedMotion) draw(0)
+  function reversePath(source, target) {
+    const rows = source.length + 1;
+    const columns = target.length + 1;
+    const distance = Array.from({ length: rows }, () => Array(columns).fill(0));
+
+    for (let i = 0; i <= source.length; i += 1) distance[i][0] = i;
+    for (let j = 0; j <= target.length; j += 1) distance[0][j] = j;
+
+    for (let i = 1; i <= source.length; i += 1) {
+      for (let j = 1; j <= target.length; j += 1) {
+        if (source[i - 1] === target[j - 1]) {
+          distance[i][j] = distance[i - 1][j - 1];
+        } else {
+          distance[i][j] = 1 + Math.min(
+            distance[i - 1][j - 1],
+            distance[i - 1][j],
+            distance[i][j - 1],
+          );
+        }
+      }
+    }
+
+    const operations = [];
+    let i = source.length;
+    let j = target.length;
+
+    while (i > 0 || j > 0) {
+      if (i > 0 && j > 0 && source[i - 1] === target[j - 1]) {
+        operations.push({ type: 'move' });
+        i -= 1;
+        j -= 1;
+      } else if (i > 0 && j > 0 && distance[i][j] === 1 + distance[i - 1][j - 1]) {
+        operations.push({ type: 'replace', character: target[j - 1] });
+        i -= 1;
+        j -= 1;
+      } else if (i > 0 && distance[i][j] === 1 + distance[i - 1][j]) {
+        operations.push({ type: 'delete' });
+        i -= 1;
+      } else {
+        operations.push({ type: 'insert', character: target[j - 1] });
+        j -= 1;
+      }
+    }
+
+    return operations;
   }
 
-  links.forEach((link) => {
-    const key = link.dataset.signalKey
-    link.addEventListener("pointerenter", () => setActive(key))
-    link.addEventListener("focus", () => setActive(key))
-    link.addEventListener("pointerleave", () => setActive(null))
-    link.addEventListener("blur", () => setActive(null))
-  })
+  async function moveRight() {
+    caret += 1;
+    render();
+    await pause(95);
+  }
 
-  window.addEventListener("pointermove", (event) => {
-    pointer.x = event.clientX / width
-    pointer.y = event.clientY / height
-  }, { passive: true })
-  window.addEventListener("resize", resize, { passive: true })
+  async function moveLeft() {
+    caret -= 1;
+    render();
+    await pause(95);
+  }
 
-  resize()
-  if (!reducedMotion) frame = window.requestAnimationFrame(draw)
+  async function backspace() {
+    value = `${value.slice(0, caret - 1)}${value.slice(caret)}`;
+    caret -= 1;
+    render();
+    await pause(185);
+  }
 
-  window.addEventListener("pagehide", () => window.cancelAnimationFrame(frame), { once: true })
-})()
+  async function type(character) {
+    value = `${value.slice(0, caret)}${character}${value.slice(caret)}`;
+    caret += 1;
+    render();
+    await pause(200);
+  }
+
+  async function transform(target) {
+    const operations = isReversing ? reversePath(value, target) : forwardPath(value, target);
+
+    for (const operation of operations) {
+      if (isReversing) {
+        if (operation.type === 'move') await moveLeft();
+        if (operation.type === 'delete') await backspace();
+        if (operation.type === 'replace') {
+          await backspace();
+          await type(operation.character);
+          await moveLeft();
+        }
+        if (operation.type === 'insert') {
+          await type(operation.character);
+          await moveLeft();
+        }
+      } else {
+        if (operation.type === 'move') await moveRight();
+        if (operation.type === 'delete') {
+          await moveRight();
+          await backspace();
+        }
+        if (operation.type === 'replace') {
+          await moveRight();
+          await backspace();
+          await type(operation.character);
+        }
+        if (operation.type === 'insert') await type(operation.character);
+      }
+    }
+
+    isReversing = !isReversing;
+  }
+
+  async function cycle() {
+    while (true) {
+      await pause(4300);
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      await transform(phrases[phraseIndex]);
+    }
+  }
+
+  render();
+  cycle();
+})();

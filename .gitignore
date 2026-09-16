@@ -1,0 +1,17 @@
+/node_modules/
+/dist/
+.DS_Store
+/content
+/.obsidian/
+/private/
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+public
+prof
+tsconfig.tsbuildinfo
+.quartz-cache
+.replit
+replit.nix

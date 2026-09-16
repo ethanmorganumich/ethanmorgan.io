@@ -18,6 +18,7 @@ Build a fresh public Markdown blog, not a Quartz reskin. Support headings, code 
 | Existing `/blog/*.html` and nested article paths | Preserved legacy content, outside the new post index. |
 | `/v2/` | Original portfolio with its original assets and resume. |
 | `/resume.pdf` | Current resume. |
+| `/gpu-calculator/` | Existing GPU Payback Lab, brought forward from the newer remote commits. |
 
 Preserve the old blog landing page as an archive entry point without changing the paths of existing articles. Do not ship the rejected root refresh or the experimental `/writing/` frontend. Keep the existing domain and hosting; no DNS or platform migration is requested.
 
@@ -36,4 +37,15 @@ Unlisted letters for particular people, alternate domains, photos, time-based co
 
 ## Status
 
-Requirements approved. Implementation and final verification follow the design checkpoint commit.
+Implemented and locally verified:
+
+- Design checkpoint: `c2a0fd7` (includes the approved reference and earlier experiments for recovery).
+- Approved homepage and fresh Markdown blog integrated; new post index starts empty.
+- `/v2/` portfolio, both resume versions, old blog article files, and GPU Payback Lab preserved.
+- Original blog landing page copied to `/blog/archive.html` at build time.
+- Seven Markdown publishing tests pass. Build checks every legacy file against its source, verifies new-page local links, and rejects unintended source files in public output.
+- Amplify and GitHub CI now build with Node 22; Amplify publishes only `dist/`.
+- Superseded design explorations, rejected writing frontend, old publishing scripts, and unused runtime dependency removed. They remain recoverable from the checkpoint. Four favicon candidates remain in source for a later choice.
+- The existing local Obsidian symlink is left on disk, ignored and removed from Git; no vault files were deleted.
+
+Final commit and push follow this verification. A successful push does not by itself confirm a completed hosting deployment.

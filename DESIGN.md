@@ -1,199 +1,72 @@
-# ethanmorgan.io — design brief
+# ethanmorgan.io — approved design
 
-This is a working document for deciding what the next version of the personal site should be. It records facts, goals, references, and open questions. It does **not** prescribe a visual design, domain migration, or interaction before those decisions are made.
+Approved September 16, 2026. The reference implementation was `design-explorations/08-centered-index/`, saved in checkpoint commit `c2a0fd7`. Its homepage, blog index, and article layout are the basis of the production migration. Earlier experiments remain available in Git history.
 
-## 1. Current system status
+## 1. Infrastructure and publishing
 
-### Hosting and infrastructure
+The site is static HTML, CSS, JavaScript, images, and PDFs, maintained in `ethanmorganumich/ethanmorgan.io`. The existing Amplify configuration builds a dedicated `dist/` directory; this migration retains the existing domain and hosting. DNS and production redirect settings live outside this repository.
 
-| Layer | Current state |
-| --- | --- |
-| Source control | GitHub repository: `ethanmorganumich/ethanmorgan.io`. |
-| Build/deploy | AWS Amplify is configured through `amplify.yml`. It runs `npm ci` and publishes the repository root as static artifacts. |
-| Delivery | `ethanmorgan.io` redirects to `www.ethanmorgan.io`. The public site is served from Amazon S3 behind Amazon CloudFront. |
-| Application architecture | Static HTML, CSS, JavaScript, images, and PDFs. No server-side application, database, or CMS is defined in this repository. |
-| DNS | DNS configuration is not represented in the repository. A future `.me` domain would need its own purchase, DNS, redirect, and canonical-URL plan. |
+The historical blog is Quartz-generated HTML. Preserve its article files and assets at their existing URLs. The new blog is built independently from explicitly selected Markdown files in `posts/`; only posts marked `published: true` are listed or rendered. Obsidian can remain the editor, but the build must not traverse a vault or publish arbitrary notes. See [WRITING.md](WRITING.md).
 
-### Current routes and transition state
+## 2. Visual requirements
 
-| Route | Role |
-| --- | --- |
-| `/` | The currently public legacy homepage. A prior refresh prototype exists locally but is not the agreed next design and should not be treated as the base. |
-| `/blog/` | Existing Quartz-generated public blog and its established URLs. |
-| `/v2/` | The preserved version of the old portfolio, staged for the next deployment as a historical reference. |
-| `/writing/` | A staged experiment in a more intentional technical-writing front door. Its eventual role should be reconsidered in light of the public-blog versus directed-writing distinction below. |
+- A compact document, not a portfolio landing page.
+- A centered main column, up to 34rem wide, with left-aligned text.
+- Inter body text at 16px, normal weight, comfortable paragraph spacing; modest names and headings.
+- Almost-white paper (`#fefdfb`), dark ink (`#292826`), quiet metadata.
+- Fixed far-left section index on desktop, near the top of the document; compact inline navigation on mobile.
+- Numbered labels such as `01 / About`; the active number is red and its label darkens as the reader scrolls.
+- Few dividing rules. Sections flow at full column width without redundant labels or split heading columns.
+- No large hero, rainbow links, photographs, or decorative background effects in this version.
 
-The old site should be preserved at `/v2/` when a genuinely new design is ready. History is useful, but it is not a design constraint for the new homepage.
+## 3. Interaction requirements
 
-### Current blog and writing workflow
+Links have a cursor-following effect in shades of blue and an animated underline. The full link stays colored on hover, including long links. Keyboard focus remains usable.
 
-The blog is a static Quartz site, not a hosted editor or database-backed CMS.
+An inline sentence changes through a real Levenshtein edit path. The caret moves through the string; deletions appear as backspaces; replacements appear as backspace and typing. Direction alternates so the next change begins where the last one ended. Use the larger red caret (3px wide, 1.15em tall). No strikethroughs or operation labels. The sentence stays readable without waiting for the animation, and reduced motion keeps it static.
 
-1. Notes are authored as Markdown in Ethan's Obsidian workspace (`Ethan's Workspace/ethanmorgan.io`).
-2. A sibling Quartz repository reads those notes through a local symlink and renders static HTML.
-3. The legacy build script generates the existing `/blog/` output.
-4. Generated files are committed with the site and served as static assets.
-
-Characteristics of the current blog:
-
-- **Obsidian-native:** writing begins in the environment Ethan already uses to think and take notes.
-- **Markdown-first:** notes remain portable, durable, and owned rather than locked into a publishing service.
-- **Static:** pages are fast and inexpensive to host, with no runtime backend.
-- **Quartz-shaped:** tags, indexes, generated navigation, and digital-garden page chrome make the blog feel like a separate product.
-- **Build-time publishing:** publishing requires generating the static site, committing the generated output, and deploying it.
-
-The likely direction is to preserve **Obsidian for authoring, Markdown for ownership, and static files for publishing**. The unresolved question is whether Quartz should remain the reader-facing experience or become a quiet build tool underneath a more custom writing site.
-
-### Two kinds of publishing
-
-| Kind | Intent | Audience and distribution |
-| --- | --- | --- |
-| **Blog** | “I made, learned, or noticed this—anyone interested can read it.” | Public, discoverable, and appropriate for technical notes, projects, and broadly useful ideas. `/blog/` is the natural home. |
-| **Letters / directed writing** | “I want to explain this more fully to people I care about.” | Written for a particular group and shared with a direct link, such as in a short email or text. The full letter lives on the site; the message is simply the invitation. |
-
-The second category is intentionally shared, not private. A static link can be unlisted from navigation and search indexes, but anyone with it can forward it. Material that needs real confidentiality belongs in a protected document or a different system.
-
-## 2. Goals
-
-The next personal site should:
-
-- Feel simple, personal, and considered.
-- Make Ethan's work and writing easy to understand.
-- Include at least one moment of genuine delight—something built with code that feels worth discovering.
-- Feel like something Ethan is proud to send people.
-- Stay fast, legible, accessible, and calm on both desktop and mobile.
-- Make the writing experience feel connected to the personal site without forcing writing onto the homepage.
-
-## 3. Requirements
-
-### Must
-
-- Preserve the current site at `/v2/` when the new site is deployed.
-- Preserve existing `/blog/` URLs.
-- Support a public home for technical writing.
-- Support intentionally shared, direct-address writing without forcing it into the public blog.
-- Respect reduced-motion preferences and never make essential content depend on an animation completing.
-- Avoid a generic portfolio, dashboard, or AI-product-marketing feel.
-- Keep the homepage concise; content should have room to breathe.
-
-### Should
-
-- Have a visually excellent but restrained interface.
-- Add delight without adding product complexity: a playful link, a small drawing, or another light code-driven detail is enough.
-- Use a narrow, document-like main column with a small sidebar that remains visible while scrolling on desktop.
-- Make it clear, quickly, who Ethan is, what he cares about, and where to find his writing.
-- Be easy to evolve as work, writing, and life change.
-
-### Could
-
-- Use a shorter personal domain such as `ethan.me` or `ethanmorgan.me` as a future primary domain, with `.io` redirecting permanently.
-- Include an unlisted letters area for intentionally shared, public-but-not-promoted writing.
-- Include small experiments or side projects when they support the personal character of the site.
-
-### Not decided
-
-- The primary domain (`.io` versus `.me`).
-- Whether a framework helps the site enough to justify its added build/runtime surface.
-- The exact typography and final accent colors.
-- Whether the cursor-following links and slow text transition are enough, or whether the page needs one additional delightful detail.
-- Whether Quartz remains visibly present in the public writing experience.
-- Whether the directed-writing area should be called `letters`, `writing`, or something else.
-- The exact amount of work history or project detail that belongs on the homepage.
-
-## 4. Design inspiration
-
-These references are prompts for observation, not pages to imitate.
-
-| Reference | What feels compelling | What to avoid copying |
-| --- | --- | --- |
-| [rajan.sh](https://www.rajan.sh/) | A personal site that reads with confidence and feels authored by an individual. | Extra visual material that competes with the writing. |
-| [benji.org](https://benji.org/) | A simple surface made memorable by playful, code-driven interactions. | Making every element interactive or turning the site into a toybox. |
-| [nat.org](https://nat.org/) | Strong typographic hierarchy and conviction. | Its harsher, more brutalist tone. |
-| [ped.ro](https://ped.ro/) | A clear separation between a personal front door and a focused writing space. | Making the two spaces feel unrelated. |
-| [sasi.codes](https://sasi.codes/) | Permission for an unexpected, personal, clever detail. | Letting novelty obscure the person or the work. |
-| Michigan PhD site (to find again) | A restrained text transformation that made a simple introduction feel computational and memorable. | Treating its exact typing/editing mechanic as a requirement before evaluating other ideas. |
-
-## 5. Design principles
-
-- **One beautiful idea, executed simply.** One memorable detail is more valuable than many decorative ones.
-- **Delight without complexity.** Prefer a playful link or a little drawing over an elaborate interactive system.
-- **Signal over surface area.** The site should say a lot with very little.
-- **Personality through behavior.** A small interaction can reveal more character than a pile of visual effects.
-- **Content first.** Interaction should never hide, delay, or compete with the actual writing and work.
-- **Long-lived rather than trendy.** The site should still feel good and usable in a few years.
-- **History is a feature.** Old work can be preserved without dictating what comes next.
-
-## 6. Interaction playground
-
-The memorable interaction is deliberately open. These are candidate directions, not commitments:
-
-- A sentence or annotation that transforms through visible edits.
-- Links that behave in a pleasant, physical, or surprising way.
-- A small illustrated or generative detail near an important part of the page.
-- An interactive explanation of a concept Ethan genuinely cares about.
-- A playful side experiment that exists simply because it is fun.
-
-Any candidate should be judged by the same questions:
-
-1. Does it feel personal rather than generic?
-2. Is it pleasant without being distracting?
-3. Does the site remain complete and readable without it?
-4. Would Ethan still enjoy it after seeing it for two years?
-5. Does it belong on this site, rather than being a separate experiment?
-
-## 7. Information architecture
-
-The homepage should feel like a well-typeset document rather than a conventional landing page. On desktop, a narrow sticky sidebar acts as the document index while the main column scrolls. On smaller screens, the index should collapse into a compact inline navigation element rather than consume permanent horizontal space.
-
-The current layout direction is more specific:
-
-- The document is a genuinely centered, slightly narrower reading column with generous space on both sides.
-- All document text remains left-aligned; “centered” describes the column, not its typography.
-- The index stays near the far-left edge and is vertically centered on desktop.
-- Index labels use the compact `01 / About` pattern and a small monospaced face.
-- Sections flow in one column. Do not spend a third of the document width on a section label beside content, and do not pair a label with a redundant heading that restates it.
-- Use rules selectively for list structure, not as the main way to communicate every division on the page.
-
-The initial structure should be small:
+## 4. Content and routes
 
 | Area | Purpose |
 | --- | --- |
-| Home | A concise introduction and the clearest routes into the rest of the site. |
-| Blog | Public technical notes, projects, and broadly useful ideas. |
-| Archive | The prior site at `/v2/`, plus legacy blog material at `/blog/`. |
-| Letters / directed writing (optional) | Unlisted, direct-address writing for an intended group. A direct URL is unlisted, not private. |
+| `/` | Short factual introduction, essential links, recent work, and the public blog. |
+| `/blog/` | New public technical writing index, starting empty. |
+| `/blog/<slug>/` | New articles with the same document style, headings, code blocks, and numbered table of contents. |
+| Existing Quartz article URLs | Older posts, preserved but not automatically listed in the new blog. |
+| `/blog/archive.html` | Preserved original blog landing page. |
+| `/v2/` | Original portfolio with its assets and original resume. |
+| `/resume.pdf` | Current resume. |
+| `/gpu-calculator/` | Existing GPU Payback Lab, preserved. |
 
-Work/project detail can live on the homepage, in writing, or behind a single route. It does not need to become a large portfolio section by default.
+Use existing factual biography and project information. The layout sample “A cursor with a memory” is an example, not an approved public post. Keep the new blog free of sample and old content until a post is explicitly selected.
 
-The homepage itself should contain a concise introduction, a short personal blurb, essential links, one delightful interaction, and a small list of recent work or writing. It should be medium-length: more substantial than a splash page, but short enough to understand without a long portfolio scroll.
+Public blog posts address anyone interested in the subject. Future letters would address particular people and be shared by direct link. An unlisted letter would not be private. Letters are not part of this migration.
 
-## 8. First build: bare bones
+## 5. Inspiration
 
-The next implementation should be a small homepage, not a full system:
+| Reference | What informed the design |
+| --- | --- |
+| [benji.org](https://benji.org/) | An ordinary, readable personal introduction with playful code-driven details. |
+| [Drawesome](https://benji.org/drawesome) | Color used deliberately in small interactions. The final links use one blue family rather than the earlier multicolor treatment. |
+| [rajan.sh](https://www.rajan.sh/) | A confident individual voice. |
+| [ped.ro](https://ped.ro/) | Separation between the personal front door and writing. |
+| [nat.org](https://nat.org/) | Simplicity, while avoiding its harsher tone. |
+| [sasi.codes](https://sasi.codes/) | Permission for something personal and unexpected. |
+| Unidentified Michigan PhD site | A memorable character-editing sentence rather than erase-and-retype animation. |
 
-1. Establish the visual foundation: precise type, dense but comfortable spacing, a near-white or very light warm background, and dark ink.
-2. Build the document layout with a sticky desktop index and a focused central reading column.
-3. Add a concise introduction, personal blurb, links, and a short list of recent things.
-4. Preserve the cursor-following color response on important links, and consider a restrained animated underline as part of the same interaction.
-5. Implement the changing phrase as a true Levenshtein edit path. The caret should move through matching characters and perform only the required insertions, deletions, and replacements. Use typing and backspace behavior rather than a forward delete; alternate direction between transitions so the caret begins each one where the prior transformation finished. It should be slow enough to follow, while showing no strike-throughs, operation labels, or algorithm visualization.
-6. Keep the current public blog intact while deciding what its future reader experience should be.
+## 6. Delivery requirements
 
-The current typography direction is a compact Inter-led system, inspired by Benji's editorial surface. Use weight, scale, and spacing for hierarchy rather than mixing serif and monospaced families. Keep the page mostly white and ink-like; use a vivid blue, green, yellow, and red palette only inside small interactions such as link exploration.
+Preserve legacy article URLs and the original portfolio, verify internal links and assets, support keyboard access and reduced motion, and generate only intended public files into `dist/`. Use the existing GitHub/Amplify deployment flow. Remove superseded experiments and obsolete publishing scripts after saving their history.
 
-Photography is intentionally excluded from the first build. It can be added later when there is a specific image that contributes something meaningful; the layout should not reserve an empty photo slot.
+See [MIGRATION.md](MIGRATION.md) for the approved scope and migration state.
 
-### Deferred palette idea
+## 7. Deferred
 
-A later iteration may let the page's ambient palette shift gradually with time of day: nearly white in the morning, lightly warm in the afternoon, muted near dusk, and dark at night. This should be evaluated only after the static palette and layout feel right. If implemented, it should preserve contrast, respect reduced-motion and color-scheme preferences where relevant, and provide a manual override.
+- Unlisted letters and their naming.
+- An alternate `.me` domain.
+- Photography once suitable images are chosen.
+- Time-of-day colors, with a manual override if implemented.
+- Choosing among the four retained favicon concepts.
+- Rich interactive article embeds beyond the initial Markdown publishing workflow.
 
-JavaScript is welcome when it makes the result better. A framework is also allowed if it earns its added weight; this is a design choice, not a rule. The default bias should simply be toward the smallest implementation that supports the final experience.
-
-## 9. Open decisions and next steps
-
-1. Define what a visitor should understand about Ethan within ten seconds.
-2. Find the Michigan PhD reference again and collect a few more examples of simple sites with one excellent interaction.
-3. Choose a shortlist of interaction experiments to prototype; do not choose based on novelty alone.
-4. Decide whether the public blog should remain Quartz-shaped or be rendered in a custom reader experience while keeping the Obsidian/Markdown workflow.
-5. Check whether `ethan.me` or `ethanmorgan.me` is worth acquiring and, only then, plan redirects and canonical URLs.
-6. Draft the first directed letter about the job transition, decide whether it is called a letter or writing, and confirm its intended audience and privacy level.
-7. Sketch a bare-bones homepage before writing implementation code.
+JavaScript and frameworks are allowed. The implementation should stay as small as the chosen experience needs.
