@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A Swiss-editorial personal site concept with a playful annotation system."
+    />
+    <title>Ethan Morgan — Index</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page-shell">
+      <header class="site-header" aria-label="Site header">
+        <a class="wordmark annotation-target" href="#top" data-index="00" data-note="Back to the beginning.">
+          EM<span aria-hidden="true">/</span>
+        </a>
+
+        <p class="edition">Index of interests<br />Revision 03.26</p>
+
+        <nav aria-label="Primary navigation">
+          <a class="annotation-target" href="#work" data-index="01" data-note="A compact ledger of recent experiments.">Work</a>
+          <a class="annotation-target" href="#notes" data-index="02" data-note="Short observations, written before they become essays.">Notes</a>
+          <a class="annotation-target" href="#contact" data-index="03" data-note="A quiet line to the person behind the page.">Contact</a>
+        </nav>
+      </header>
+
+      <main id="main">
+        <section class="introduction" id="top" aria-labelledby="intro-heading">
+          <p class="section-number" aria-hidden="true">00</p>
+          <div>
+            <p class="eyebrow">Oakland, California · 37.8044° N</p>
+            <h1 id="intro-heading">
+              Ethan Morgan makes
+              <button
+                class="inline-annotation annotation-target"
+                type="button"
+                data-index="A"
+                data-note="Systems that expand judgment without pretending to replace it."
+              >intelligent tools</button>
+              for people doing
+              <button
+                class="inline-annotation annotation-target"
+                type="button"
+                data-index="B"
+                data-note="Work with an uncertain answer and a useful consequence."
+              >difficult work</button>.
+            </h1>
+            <p class="intro-note">
+              Researcher, engineer, occasional teacher. Interested in how machines learn,
+              how people decide, and what happens in between.
+            </p>
+          </div>
+        </section>
+
+        <section class="index-section" id="work" aria-labelledby="work-heading">
+          <div class="section-heading">
+            <p class="section-number" aria-hidden="true">01</p>
+            <h2 id="work-heading">Selected index</h2>
+          </div>
+
+          <ol class="project-index">
+            <li id="project-01">
+              <a
+                class="index-row annotation-target"
+                href="#project-01"
+                data-index="01"
+                data-note="A small interface for understanding where an autonomous system hesitates."
+              >
+                <span class="row-code">SYS—01</span>
+                <span class="row-title">The Useful Pause</span>
+                <span class="row-kind">Interface study</span>
+                <span class="row-year">2026</span>
+              </a>
+            </li>
+            <li id="project-02">
+              <a
+                class="index-row annotation-target"
+                href="#project-02"
+                data-index="02"
+                data-note="Thirty field notes on the surprisingly social life of model evaluation."
+              >
+                <span class="row-code">OBS—14</span>
+                <span class="row-title">Notes on Evaluation</span>
+                <span class="row-kind">Field notes</span>
+                <span class="row-year">2025</span>
+              </a>
+            </li>
+            <li id="project-03">
+              <a
+                class="index-row annotation-target"
+                href="#project-03"
+                data-index="03"
+                data-note="A deliberately impractical machine that sorts thoughts by their half-life."
+              >
+                <span class="row-code">EXP—08</span>
+                <span class="row-title">Half-life Cabinet</span>
+                <span class="row-kind">Weekend experiment</span>
+                <span class="row-year">2025</span>
+              </a>
+            </li>
+            <li id="project-04">
+              <a
+                class="index-row annotation-target"
+                href="#project-04"
+                data-index="04"
+                data-note="An open syllabus for learning by making very small, observable systems."
+              >
+                <span class="row-code">EDU—03</span>
+                <span class="row-title">Tiny Systems</span>
+                <span class="row-kind">Open syllabus</span>
+                <span class="row-year">2024</span>
+              </a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="notes-section" id="notes" aria-labelledby="notes-heading">
+          <div class="section-heading">
+            <p class="section-number" aria-hidden="true">02</p>
+            <h2 id="notes-heading">Recent notes</h2>
+          </div>
+
+          <div class="notes-list">
+            <article id="note-01">
+              <p class="note-date"><time datetime="2026-02-18">18.02.26</time></p>
+              <h3>
+                <a class="annotation-target" href="#note-01" data-index="N1" data-note="4 minutes · A note on software that knows when to step aside.">
+                  Interfaces for uncertainty
+                </a>
+              </h3>
+            </article>
+            <article id="note-02">
+              <p class="note-date"><time datetime="2026-01-27">27.01.26</time></p>
+              <h3>
+                <a class="annotation-target" href="#note-02" data-index="N2" data-note="6 minutes · Why prototypes should expose their seams.">
+                  The value of a visible seam
+                </a>
+              </h3>
+            </article>
+            <article id="note-03">
+              <p class="note-date"><time datetime="2025-12-09">09.12.25</time></p>
+              <h3>
+                <a class="annotation-target" href="#note-03" data-index="N3" data-note="3 minutes · Against smoothing every interesting edge.">
+                  Keep one strange thing
+                </a>
+              </h3>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="annotation-rail" aria-live="polite" aria-label="Context note">
+        <p class="annotation-label">Active note <span id="annotation-index">A</span></p>
+        <p id="annotation-copy">Systems that expand judgment without pretending to replace it.</p>
+        <span class="rail-axis" aria-hidden="true"></span>
+      </aside>
+
+      <svg class="leader-layer" aria-hidden="true" focusable="false">
+        <path id="leader-path" d="" />
+        <circle id="leader-origin" r="4" cx="0" cy="0" />
+      </svg>
+
+      <footer id="contact">
+        <p>Available for careful conversations.</p>
+        <a
+          class="annotation-target"
+          href="mailto:hello@example.com"
+          data-index="EM"
+          data-note="This address is fictional, but the invitation is sincere."
+        >hello@example.com</a>
+        <p class="footer-mark">EM—CA—26</p>
+      </footer>
+    </div>
+  </body>
+</html>

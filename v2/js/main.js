@@ -209,6 +209,7 @@
         const blocks = document.querySelectorAll("[data-animate-block]");
 
         window.addEventListener("scroll", viewportAnimation);
+        viewportAnimation();
 
         function viewportAnimation() {
 

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A single-screen personal site built around a deliberately edited sentence."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Ethan Morgan — Kinetic sentence concept</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="monogram" href="./" aria-label="Ethan Morgan, home">EM</a>
+        <a class="quiet-link" href="mailto:hello@example.com">say hello</a>
+      </header>
+
+      <main>
+        <p class="index">A personal note, no. 04</p>
+
+        <h1>
+          Ethan Morgan is an engineer who keeps returning to
+          <button
+            class="phrase-button"
+            id="kinetic-phrase"
+            type="button"
+            aria-describedby="phrase-instruction"
+            aria-label="Change interest. Current interest: making machines easier to understand."
+          >
+            <span class="phrase-text">making machines easier to understand</span><span class="full-stop">.</span>
+          </button>
+        </h1>
+
+        <div class="operation-line" aria-hidden="true">
+          <span class="operation" id="operation">resting</span>
+          <span class="operation-count" id="operation-count">edit distance —</span>
+        </div>
+
+        <p class="instruction" id="phrase-instruction">
+          The cursor takes the shortest route. Click the phrase to send it somewhere else.
+        </p>
+      </main>
+
+      <footer>
+        <span>Fictional details for a design study</span>
+        <span class="footer-links">
+          <a href="#notes">notes</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/" rel="noreferrer">code</a>
+        </span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

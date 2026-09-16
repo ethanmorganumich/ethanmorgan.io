@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A fictional personal-site concept presented as a small desk note."
+    />
+    <title>Mara Venn · A note from my desk</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#note">Skip to the note</a>
+
+    <main>
+      <article class="desk-note" id="note">
+        <div class="note-copy">
+          <div class="dateline">
+            <span>Tuesday, late afternoon</span>
+            <span>Portland, Oregon</span>
+          </div>
+
+          <h1>Hi, I’m Mara.</h1>
+
+          <p>
+            I make software, collect overheard phrases, and keep buying basil
+            plants despite the evidence. Lately I’ve been thinking about how
+            computers can feel less demanding and a little more companionable.
+          </p>
+
+          <p>
+            This is where I leave my
+            <a href="#notes" data-machine="read">short notes</a>,
+            <a href="#things" data-machine="tinker">small experiments</a>,
+            and an address if you’d like to
+            <a href="mailto:hello@example.com" data-machine="hello">write back</a>.
+          </p>
+
+          <aside class="scrap" aria-label="A note about today">
+            <span aria-hidden="true">☆</span>
+            <p>
+              Today: fixing a squeaky bike pedal, making lentil soup, and
+              teaching a browser to notice pauses.
+            </p>
+          </aside>
+
+          <p class="signoff">See you around,</p>
+          <p class="signature">Mara</p>
+
+          <div class="quiet-links" aria-label="A few more places">
+            <a id="notes" href="#note">notes</a>
+            <span aria-hidden="true">·</span>
+            <a id="things" href="#note">things I’ve made</a>
+            <span aria-hidden="true">·</span>
+            <a href="#note">elsewhere</a>
+          </div>
+        </div>
+
+        <figure class="machine" data-state="idle">
+          <svg viewBox="0 0 360 300" role="img" aria-labelledby="machine-title machine-desc">
+            <title id="machine-title">A little link-sorting machine</title>
+            <desc id="machine-desc">
+              A loose line drawing of a desk machine with a lever, two wheels,
+              a lamp, and a paper strip. It moves when links in the note are explored.
+            </desc>
+
+            <g class="machine-shadow" aria-hidden="true">
+              <ellipse cx="183" cy="267" rx="129" ry="11" />
+            </g>
+
+            <g class="machine-lines">
+              <path class="cord" d="M282 224 C328 228 326 267 346 270" />
+              <path class="body" d="M84 97 C85 80 98 70 116 70 H258 C276 70 286 82 286 100 V230 C286 247 275 256 258 256 H110 C92 256 82 245 82 228 Z" />
+              <path class="panel" d="M105 113 H257 V211 H105 Z" />
+              <path d="M105 150 H257" />
+              <path d="M181 113 V211" />
+              <path class="paper" d="M132 211 V244 C148 238 160 248 177 242 C193 236 207 247 226 240 V211" />
+              <path d="M96 256 L88 275 M270 256 L278 275" />
+            </g>
+
+            <g class="lamp">
+              <path class="machine-lines" d="M128 70 V48 H163" />
+              <circle class="lamp-glow" cx="176" cy="48" r="24" />
+              <circle class="lamp-bulb" cx="176" cy="48" r="10" />
+              <path class="machine-lines lamp-rays" d="M176 20 V9 M151 27 L143 19 M201 27 L209 19" />
+            </g>
+
+            <g class="lever">
+              <path class="machine-lines" d="M286 125 L321 91" />
+              <circle class="lever-knob" cx="326" cy="86" r="10" />
+            </g>
+
+            <g class="left-wheel">
+              <circle class="wheel-fill" cx="143" cy="181" r="24" />
+              <circle class="machine-lines" cx="143" cy="181" r="24" />
+              <path class="machine-lines" d="M143 157 V205 M119 181 H167 M126 164 L160 198 M160 164 L126 198" />
+            </g>
+
+            <g class="right-wheel">
+              <circle class="wheel-fill" cx="219" cy="181" r="24" />
+              <circle class="machine-lines" cx="219" cy="181" r="24" />
+              <path class="machine-lines" d="M219 157 V205 M195 181 H243 M202 164 L236 198 M236 164 L202 198" />
+            </g>
+
+            <g class="message-window">
+              <rect x="124" y="124" width="113" height="15" rx="3" />
+              <text x="180.5" y="135" text-anchor="middle">...</text>
+            </g>
+
+            <g class="machine-face" aria-hidden="true">
+              <circle cx="268" cy="90" r="2.5" />
+              <path d="M265 99 Q271 104 276 98" />
+            </g>
+          </svg>
+          <figcaption>
+            link-sorter no. 3 — <span data-machine-caption>resting</span>
+          </figcaption>
+        </figure>
+      </article>
+    </main>
+  </body>
+</html>

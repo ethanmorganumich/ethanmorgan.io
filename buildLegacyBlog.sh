@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Usage: When you want to update the blogs
+# Legacy archive only. New technical notes are published with ./buildWriting.sh.
+# Usage: When you want to update the legacy blog archive
 # $ ./updateBlogScript.sh
 
 # How to update blog

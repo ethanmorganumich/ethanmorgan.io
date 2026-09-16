@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="corners"><rect width="64" height="64" rx="5"/></clipPath>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffdc48"/>
+      <stop offset=".53" stop-color="#ff5d2e"/>
+      <stop offset="1" stop-color="#d21859"/>
+    </linearGradient>
+    <radialGradient id="first" cx="15%" cy="15%" r="70%">
+      <stop stop-color="#ffdc48"/>
+      <stop offset="1" stop-color="#ffdc48" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="second" cx="86%" cy="80%" r="70%">
+      <stop stop-color="#d21859" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#d21859" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#corners)">
+    <rect width="64" height="64" fill="url(#base)"/>
+    <rect width="64" height="64" fill="url(#first)"/>
+    <rect width="64" height="64" fill="url(#second)"/>
+  </g>
+</svg>

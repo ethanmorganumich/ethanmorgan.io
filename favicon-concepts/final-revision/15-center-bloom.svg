@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="corners"><rect width="64" height="64" rx="5"/></clipPath>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffed7c"/>
+      <stop offset=".53" stop-color="#ff702e"/>
+      <stop offset="1" stop-color="#d91d45"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="47%" cy="46%" r="70%">
+      <stop stop-color="#fff9d2" stop-opacity=".98"/>
+      <stop offset=".18" stop-color="#fff1a1" stop-opacity=".88"/>
+      <stop offset=".52" stop-color="#fff7bd" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#fff7bd" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sphere" cx="100%" cy="100%" r="72%">
+      <stop stop-color="#b5165b" stop-opacity=".93"/>
+      <stop offset=".54" stop-color="#d91d45" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#d91d45" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#corners)">
+    <rect width="64" height="64" fill="url(#base)"/>
+    <rect width="64" height="64" fill="url(#sun)"/>
+    <rect width="64" height="64" fill="url(#sphere)"/>
+  </g>
+</svg>
