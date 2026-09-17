@@ -6,7 +6,7 @@
     "preview": "python3 -m http.server 4173 --directory dist"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=18.14"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
