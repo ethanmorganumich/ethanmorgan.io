@@ -46,7 +46,6 @@
 
   const phrases = [
     'useful software',
-    'humane systems',
     'tools that last',
     'clearer interfaces',
   ];

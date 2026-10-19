@@ -10,7 +10,7 @@ const staging = await mkdtemp(path.join(tmpdir(), 'ethan-site-'));
 const siteUrl = 'https://www.ethanmorgan.io';
 
 // Only these public sources are deployed; never traverse the Obsidian symlink.
-const publicFiles = ['index.html', '404.html', 'resume.pdf', 'assets/site.css', 'assets/site.js', 'assets/blog.css'];
+const publicFiles = ['index.html', '404.html', 'favicon.svg', 'resume.pdf', 'assets/site.css', 'assets/site.js', 'assets/blog.css'];
 const publicDirectories = ['v2', 'blog', 'gpu-calculator'];
 
 async function rejectSymlinks(directory) {

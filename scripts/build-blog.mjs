@@ -67,7 +67,7 @@ function pageShell({ title, description, canonical, bodyClass, main, toc = '', s
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${escapeHtml(description)}">
     <link rel="canonical" href="${escapeHtml(canonical)}">
-    <link rel="icon" href="/v2/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <title>${escapeHtml(title)} — Ethan Morgan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
