@@ -1,8 +1,8 @@
-import { cp, copyFile, lstat, mkdir, mkdtemp, readdir, rm, writeFile } from 'node:fs/promises';
+import { cp, copyFile, lstat, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildBlog } from './build-blog.mjs';
+import { buildBlog, renderPostEntries } from './build-blog.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.join(root, 'dist');
@@ -45,7 +45,12 @@ try {
     await cp(attachments, path.join(staging, 'assets/blog'), { recursive: true });
   }
   await copyFile(path.join(staging, 'blog/index.html'), path.join(staging, 'blog/archive.html'));
-  await buildBlog({ outDir: staging, siteUrl });
+  const posts = await buildBlog({ outDir: staging, siteUrl });
+  const homepagePath = path.join(staging, 'index.html');
+  const homepage = await readFile(homepagePath, 'utf8');
+  const marker = '<!-- recent-blog-posts -->';
+  if (!homepage.includes(marker)) throw new Error('Homepage is missing the recent blog posts marker.');
+  await writeFile(homepagePath, homepage.replace(marker, () => renderPostEntries(posts.slice(0, 3))));
 
   const urls = [];
   async function collectPages(directory) {

@@ -89,10 +89,14 @@ ${main}
 `
 }
 
-function indexPage(posts, siteUrl) {
-  const entries = posts.length
+export function renderPostEntries(posts) {
+  return posts.length
     ? posts.map((post) => `          <li><a class="tracking-link entry-title" href="/blog/${encodeURIComponent(post.slug)}/">${escapeHtml(post.title)}</a><p>${escapeHtml(post.description)}</p><span class="entry-meta">${escapeHtml(post.date)}</span></li>`).join('\n')
     : '          <li>No posts yet.</li>'
+}
+
+function indexPage(posts, siteUrl) {
+  const entries = renderPostEntries(posts)
   return pageShell({
     title: 'Blog',
     description: 'Notes on software, experiments, and making things, by Ethan Morgan.',

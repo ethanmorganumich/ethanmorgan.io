@@ -22,6 +22,8 @@ Use standard Markdown links. For images or other public attachments, copy only t
 
 The site build calls `buildBlog({ outDir, siteUrl })` from `scripts/build-blog.mjs` after copying the legacy output into `outDir`. It writes the replacement `/blog/index.html`, published `/blog/<slug>/index.html` pages, and `/blog/feed.xml`. The build refuses to overwrite an existing post path, preserving legacy article HTML and assets until they are intentionally migrated.
 
+The homepage automatically shows the three newest published posts, with their titles, descriptions, and dates. Publishing or unpublishing a post updates this list on the next build.
+
 To build and review locally:
 
 ```bash
